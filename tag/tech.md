@@ -1,5 +1,5 @@
 ---
 layout: tagpage
-title: "Tag: Tech"
+title: "技术笔记部分"
 tag: tech
 ---
