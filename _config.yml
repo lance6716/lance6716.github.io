@@ -26,11 +26,15 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 github_username:  lance6716
 google_analytics: UA-146865143-1
+# show_excerpts: true
 
 # Build settings
 theme: minima
 plugins:
   - jekyll-feed
+#  - jekyll-paginate
+
+# paginate: 10
 
 # Exclude from processing.
 # The following items will not be processed, by default.
