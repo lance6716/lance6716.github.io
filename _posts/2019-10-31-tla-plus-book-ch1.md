@@ -4,6 +4,8 @@ title:  "Specifying Systems 第一章笔记"
 tags: tech
 ---
 
+[TLA+主页](https://lamport.azurewebsites.net/tla/tla.html)
+
 # 1.1 命题逻辑
 
 TLA 使用合取、析取、否定、蕴含、相等五个逻辑运算符。
