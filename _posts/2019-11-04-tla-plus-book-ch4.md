@@ -16,7 +16,7 @@ InChan == INSTANCE Channel WITH Data <- Message, chan <- in
 
 `Seq(S)`表示`S`集合能组成的所有有限序列。
 
-`Head(S)`、`Tail(S)`表示序列的首、尾元素。
+`Head(S)`、`Tail(S)`表示序列的首元素及剩余序列。
 
 `Append(S)`、`S \o T`表示序列与元素、另一个序列连接。
 
@@ -26,7 +26,7 @@ InChan == INSTANCE Channel WITH Data <- Message, chan <- in
 
 # 4.2 考察实例化
 
-实例化的主要用途是隐藏变量。除此之外，有以下几个方面需要注意。
+与`EXTENDS`不同，实例化需要导入的所有符号在本模块有定义，主要是`CONSTANT`、`VARIABLE`等关键词定义的标识符需要指明本模块的对应关系。除此之外，有以下几个方面需要注意。
 
 #### 4.2.1 实例化即替换
 
@@ -54,7 +54,7 @@ Chan(ch) == INSTANCE Channel WITH Data <- Message, chan <- ch
 ```
 INSTANCE Module WITH symbol_from_module <- symbol_here, ...
 ```
-进行了一次同名实例化。这像`EXTENDS`一样导入了其他模块的标识符，但对指定的符号进行了替换。由此可以总结，`EXTENDS`导入的模块不能包含 TLA+ 和自身模块未定义的、由`CONSTANT`等关键词定义的外部标识符。
+进行了一次同名实例化。这像`EXTENDS`一样导入了其他模块的符号，但对指定的符号进行了替换。
 
 # 4.3 隐藏内部队列
 
