@@ -137,8 +137,6 @@ Coherence == \A p, q \in Proc, a \in Adr :
                 (NoVal \notin {cache[p][a], cache[q][a]})
                       => (cache[p][a]=cache[q][a])
 ```
-这里要注意到`NoVal`是通过`CHOOSE`定义的，两个`NoVal`并不一定相等。
-
 模块通过`EXTEND`或者实例化导入了一些*行为*，但是原模块有额外的状态变量时，要注意导入*行为*还要保证这些额外状态变量不变，即
 ```
 action == action_from_import /\ UNCHANGED <<variable_declared_here>>
