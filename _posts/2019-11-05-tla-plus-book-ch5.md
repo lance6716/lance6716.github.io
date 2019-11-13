@@ -29,7 +29,7 @@ VARIABLE   memInt                 \* represent memory
 CONSTANTS  Send(_, _, _, _),
            Reply(_, _, _, _),
            InitMemInt,            \* set of possible initial values of memInt
-           Proc,                  \* set of processor identiers
+           Proc,                  \* set of processor identiers
            Adr,                   \* set of memory addresses
            Val                    \* set of memory values
 

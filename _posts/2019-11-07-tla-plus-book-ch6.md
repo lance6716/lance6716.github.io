@@ -30,7 +30,7 @@ TLA+ 没有类型系统，因此不能检查`3 / "abc"`等无意义的表达式�
 
 TLA+ 要求递归函数有特殊的定义方法。下面的直观的递归定义阶乘函数是错误的：
 ```
-fact == [n \in Nat |-> IF n = 0 THEN 1 ELSE n * fact[n - 1]]
+fact == [n \in Nat |-> IF n = 0 THEN 1 ELSE n * fact[n - 1]]
 ```
 原因是在解析右侧的表达式时，`fact`标识符还没有定义。
 
