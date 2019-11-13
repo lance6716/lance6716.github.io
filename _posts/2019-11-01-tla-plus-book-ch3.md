@@ -36,12 +36,12 @@ THEOREM specification => []invariant
 ```
 TypeInvariant  ==  chan \in [val : Data,  rdy : {0, 1},  ack : {0, 1}]
 ```
-通过`action(parameter)`表示带参数的*行为*，我们可以使用如下的*行为*描述发送数据时的状态转移：
+通过`action(parameter)`表示带参数的*动作*，我们可以使用如下的*动作*描述发送数据时的状态转移：
 ```
 Send(d) ==  /\ chan.rdy = chan.ack
             /\ chan' = [chan EXCEPT !.val = d, !.rdy = 1 - @]
 ```
-其中`EXCEPT`与`!`组合表明新记录在某些域上有新取值，`@`表示这个域的旧值。可以验证使该*行为*为真的状态转移确实描述了可发送的状态以及发送后系统的改变。
+其中`EXCEPT`与`!`组合表明新记录在某些域上有新取值，`@`表示这个域的旧值。可以验证使该*动作*为真的状态转移确实描述了可发送的状态以及发送后系统的改变。
 
 # 3.3 类型：一个提示
 
